@@ -45,9 +45,23 @@ public class moveobject : MonoBehaviour
 
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.gameObject.tag == "test")
+        {
+            rb.mass -= 1;
+            if(rb.mass < 1)
+            {
+                rb.useGravity = false; // これをオフにしたら浮くようになる
+
+                InArea = true; //これをオンにしないと上にあげる処理に飛ばない
+                rb.mass = 1;　 //重さを1にしてmassが0にならないようにしている
+            }
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "test")
+        if (other.gameObject.tag == "test" && rb.mass <= 1)
         {
             //竜巻の範囲内に入ったら終点を自動的に入れる
             endMarker = other.gameObject.GetComponent<Transform>();
@@ -55,12 +69,12 @@ public class moveobject : MonoBehaviour
             //二点間の距離を代入(スピード調整に使う)
             distance_two = Vector3.Distance(startMarker.position, endMarker.position);
 
-            rb.useGravity = false; // これをオフにしたら浮くようになる
+            //rb.useGravity = false; // これをオフにしたら浮くようになる
 
-            InArea = true;
+            //InArea = true;
         }
 
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Player" && rb.mass <= 1)
         {
             GetComponent<MeshCollider>().enabled = false;
             this.enabled = false;
@@ -76,5 +90,10 @@ public class moveobject : MonoBehaviour
             this.enabled = true;
             InArea = false;
         }
+    }
+
+    public float Getmass()
+    {
+        return GetComponent<Rigidbody>().mass; //どこに？あーおｋ
     }
 }

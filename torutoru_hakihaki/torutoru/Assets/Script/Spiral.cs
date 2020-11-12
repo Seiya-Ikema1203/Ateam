@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 
 public class Spiral : MonoBehaviour
 {
-    //public float Rotate = 100.0f;
-    //public bool InArea = false;
+    public float test;
+
 
     void Start()
     {
@@ -13,14 +14,19 @@ public class Spiral : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Obj")
+        if(other.gameObject.tag == "Obj") //moveobjectのrb.massが1になったら子オブジェクトにするようにする
         {
-
-            //オブジェクトを子要素に
-            GameObject emptyObject = new GameObject();
-            emptyObject.transform.parent = this.transform;
-            other.transform.parent = emptyObject.transform;
-            emptyObject.name = "object";
+            Debug.Log("aaaaa");
+            test = other.GetComponent<moveobject>().Getmass();
+            if (test <= 1f)
+            {
+                Debug.Log("iiiiiiii");
+                //オブジェクトを子要素に
+                GameObject emptyObject = new GameObject();
+                emptyObject.transform.parent = this.transform;
+                other.transform.parent = emptyObject.transform;
+                emptyObject.name = "object";
+            }
         }
     }
 
@@ -35,6 +41,6 @@ public class Spiral : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 }
