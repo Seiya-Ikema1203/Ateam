@@ -21,9 +21,14 @@ public class moveobject : MonoBehaviour
     private Rigidbody rb;
     //public float thrust = 1.0f;
 
+    // エリアの変数
+    //private GameObject point;
+
+
     void Start()
     {
        rb = GetComponent<Rigidbody>();
+      // GameObject point = GameObject.Find("Point");
     }
 
 
@@ -61,7 +66,7 @@ public class moveobject : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "test" && rb.mass <= 1)
+        if (other.gameObject.tag == "test" && rb.mass <= 1)// != Input.GetKey(KeyCode.Space))
         {
             //竜巻の範囲内に入ったら終点を自動的に入れる
             endMarker = other.gameObject.GetComponent<Transform>();
@@ -72,13 +77,31 @@ public class moveobject : MonoBehaviour
             //rb.useGravity = false; // これをオフにしたら浮くようになる
 
             //InArea = true;
+
+
+
+            //if (Input.GetKey(KeyCode.Space)){
+            //    endMarker = point.gameObject.GetComponent<Transform>();
+            //}
+
         }
 
-        if(other.gameObject.tag == "Player" && rb.mass <= 1)
+        //else if (Input.GetKey(KeyCode.Space))     //89行目と101行目後々使うかも
+        //{
+        //    this.enabled = false;
+        //}
+
+        if (other.gameObject.tag == "Player" && rb.mass <= 1)
         {
             GetComponent<MeshCollider>().enabled = false;
             this.enabled = false;
         }
+
+
+        //else if (Input.GetKey(KeyCode.Space))
+        //{
+        //    this.enabled = false;
+        //}
     }
 
 
