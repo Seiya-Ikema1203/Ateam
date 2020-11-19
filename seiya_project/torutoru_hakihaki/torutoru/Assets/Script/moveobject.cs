@@ -58,7 +58,7 @@ public class moveobject : MonoBehaviour
             if(rb.mass < 1)
             {
                 rb.useGravity = false; // これをオフにしたら浮くようになる
-
+                GameController.count -= 1;
                 InArea = true; //これをオンにしないと上にあげる処理に飛ばない
                 rb.mass = 1;　 //重さを1にしてmassが0にならないようにしている
             }

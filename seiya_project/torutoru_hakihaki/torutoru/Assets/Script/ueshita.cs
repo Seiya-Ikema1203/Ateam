@@ -21,6 +21,6 @@ public class ueshita : MonoBehaviour
         if (mv.InArea== true)
         {
             transform.Rotate(new Vector3(10f, -20, 10f));
-            transform.position = new Vector3(transform.position.x, nowPosi + Mathf.PingPong(Time.time / 1, 20.0f), transform.position.z);        }
+            transform.position = new Vector3(transform.position.x, nowPosi + Mathf.PingPong(Time.time / 1, 40.0f), transform.position.z);        }
     }
 }
