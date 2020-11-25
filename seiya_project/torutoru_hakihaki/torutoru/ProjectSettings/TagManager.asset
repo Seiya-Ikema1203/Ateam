@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Obj
   - test
+  - Obj_chu
+  - Obj_dai
   layers:
   - Default
   - TransparentFX

@@ -52,7 +52,7 @@ public class moveobject : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if(other.gameObject.tag == "test")
+        if(other.gameObject.tag == "test" && omosa.currentCap <= 150)
         {
             rb.mass -= 1;
             if(rb.mass < 1)
@@ -66,13 +66,14 @@ public class moveobject : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "test" && rb.mass <= 1)// != Input.GetKey(KeyCode.Space))
+        if (other.gameObject.tag == "test" && rb.mass <= 1 && omosa.currentCap <= 150)// != Input.GetKey(KeyCode.Space))
         {
             //竜巻の範囲内に入ったら終点を自動的に入れる
             endMarker = other.gameObject.GetComponent<Transform>();
 
             //二点間の距離を代入(スピード調整に使う)
             distance_two = Vector3.Distance(startMarker.position, endMarker.position);
+
 
             //rb.useGravity = false; // これをオフにしたら浮くようになる
 
@@ -91,7 +92,7 @@ public class moveobject : MonoBehaviour
         //    this.enabled = false;
         //}
 
-        if (other.gameObject.tag == "Player" && rb.mass <= 1)
+        if (other.gameObject.tag == "Player" && rb.mass <= 1 && omosa.currentCap <= 150)
         {
             GetComponent<MeshCollider>().enabled = false;
             this.enabled = false;
