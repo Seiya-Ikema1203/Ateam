@@ -16,17 +16,17 @@ public class Spiral : MonoBehaviour
     {
         if(other.gameObject.tag == "Obj") //moveobjectのrb.massが1になったら子オブジェクトにするようにする
         {
-            Debug.Log("aaaaa");
-            test = other.GetComponent<moveobject>().Getmass();
-            if (test <= 1f)
-            {
+            //Debug.Log("aaaaa");
+            //test = other.GetComponent<moveobject>().Getmass();
+            //if (test <= 1f)
+            //{
                 Debug.Log("iiiiiiii");
                 //オブジェクトを子要素に
                 GameObject emptyObject = new GameObject();
                 emptyObject.transform.parent = this.transform;
                 other.transform.parent = emptyObject.transform;
                 emptyObject.name = "object";
-            }
+           // }
         }
     }
 
