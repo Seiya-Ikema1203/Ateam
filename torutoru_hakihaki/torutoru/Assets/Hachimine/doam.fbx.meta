@@ -1,9 +1,46 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 1b4c41f2502429446ac2036beea4b59d
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
   externalObjects: {}
+=======
+guid: 93cd6516b5467a24597ac4965a08ac67
+ModelImporter:
+  serializedVersion: 19300
+  internalIDToNameTable: []
+<<<<<<<< HEAD:torutoru_hakihaki/torutoru/Assets/Hachimine/doam.fbx.meta
+  externalObjects: {}
+========
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 2d473d1f81b544946b4514e503a0478b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u30DE\u30C6\u30EA\u30A2\u30EB"
+    second: {fileID: 2100000, guid: 8d618b06cf128534abb2b6c784967738, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u30DE\u30C6\u30EA\u30A2\u30EB.001"
+    second: {fileID: 2100000, guid: c865e60acc25b8145a158b51cdff044b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u30DE\u30C6\u30EA\u30A2\u30EB.002"
+    second: {fileID: 2100000, guid: bb4d6bef01323fc44ae39d461a365c50, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u30DE\u30C6\u30EA\u30A2\u30EB.003"
+    second: {fileID: 2100000, guid: f2c6d205e2337b24c8426ff323d420c0, type: 2}
+>>>>>>>> fafdf12921c96f7736612b313e5634e2ac797094:torutoru_hakihaki/torutoru/Assets/Hachimine/building.fbx.meta
+>>>>>>> fafdf12921c96f7736612b313e5634e2ac797094
   materials:
     materialImportMode: 1
     materialName: 0
@@ -43,7 +80,10 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+<<<<<<< HEAD
     fileIdsGeneration: 2
+=======
+>>>>>>> fafdf12921c96f7736612b313e5634e2ac797094
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
