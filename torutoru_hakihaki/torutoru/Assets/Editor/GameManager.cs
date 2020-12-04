@@ -5,6 +5,7 @@ using UnityEditor.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    #if UNITY_EDITOR
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,10 @@ public class GameManager : MonoBehaviour
 
     public void END()
     {
+        
         UnityEditor.EditorApplication.isPlaying = false;
+        
     }
+
+#endif
 }
