@@ -16,7 +16,7 @@ public class Spiral : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Obj" && omosa.currentCap <= 150) //moveobjectのrb.massが1になったら子オブジェクトにするようにする
+        if(other.gameObject.tag == "Obj" && omosa.currentCap <= 150 && moveobject.KeyFlag == false) //moveobjectのrb.massが1になったら子オブジェクトにするようにする
         {
             //Debug.Log("aaaaa");
             //test = other.GetComponent<moveobject>().Getmass();
@@ -28,7 +28,12 @@ public class Spiral : MonoBehaviour
                 emptyObject.transform.parent = this.transform;
                 other.transform.parent = emptyObject.transform;
                 emptyObject.name = "object";
-           // }
+            // }
+            if (moveobject.KeyFlag == true)
+            {
+                Debug.Log("a");
+                moveobject.KeyFlag = false;
+            }
         }
 
 
@@ -75,9 +80,10 @@ public class Spiral : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (omosa.currentCap >= 150)
+        //if (moveobject.KeyFlag == true)
         //{
-        //    this.enabled = false;
+        //    gameObject.transform.parent = null;
+        //    moveobject.KeyFlag = false;
         //}
     }
 }

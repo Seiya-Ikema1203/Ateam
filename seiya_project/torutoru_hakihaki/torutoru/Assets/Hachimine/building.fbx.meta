@@ -1,17 +1,7 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 5ff795432813d304f9afafd62696275f
+guid: 1b9b66c5510e027449c0fce0a9c60290
 ModelImporter:
   serializedVersion: 19301
-=======
-<<<<<<< HEAD
-guid: 68e943b859c23b84b962313feee2c374
-=======
-guid: 6cf2e8be16a0faf42af4ba6fc0d61692
->>>>>>> 61b41c75ab7132bf4ccf22389a1959455880aeee
-ModelImporter:
-  serializedVersion: 19300
->>>>>>> 0b9d6124c8d59f4c721a66e3eab8f0b9ad00dd7c
   internalIDToNameTable: []
   externalObjects: {}
   materials:
@@ -53,10 +43,7 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
-<<<<<<< HEAD
     fileIdsGeneration: 2
-=======
->>>>>>> 0b9d6124c8d59f4c721a66e3eab8f0b9ad00dd7c
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
