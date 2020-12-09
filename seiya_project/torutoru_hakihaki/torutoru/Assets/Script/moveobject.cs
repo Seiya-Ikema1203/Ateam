@@ -18,6 +18,8 @@ public class moveobject : MonoBehaviour
     //フラグ用
     public  bool InArea;
 
+    public static bool KeyFlag;
+
     private Rigidbody rb;
     //public float thrust = 1.0f;
 
@@ -46,6 +48,12 @@ public class moveobject : MonoBehaviour
                 transform.position = Vector3.Lerp(startMarker.position, endMarker.position, present_Location);
             }
 
+        }
+
+        if (Input.GetKeyDown("space"))
+        {
+            KeyFlag = true;
+            Debug.Log("ositayo");
         }
 
     }
@@ -92,7 +100,7 @@ public class moveobject : MonoBehaviour
         //    this.enabled = false;
         //}
 
-        if (other.gameObject.tag == "Player" && rb.mass <= 1 && omosa.currentCap <= 150)
+        if (other.gameObject.tag == "Player" && rb.mass <= 1 && omosa.currentCap <= 150) //playerコライダーにあたったら中央に寄り過ぎないように
         {
             GetComponent<MeshCollider>().enabled = false;
             this.enabled = false;
